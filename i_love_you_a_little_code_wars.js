@@ -15,8 +15,12 @@ Your goal in this kata is to determine which phrase the girls would say for a fl
 */
 
 const howMuchILoveYou = (nbPetals) => {
+  console.log('here is nbPetals at the start: ' + nbPetals);
     const phrases = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
     let index = nbPetals;
+    if(nbPetals % 6 === 0) {
+      return 'not at all';
+    }
     if(nbPetals > phrases.length) {
       index = (index % 6) - 1;
       console.log(index);
